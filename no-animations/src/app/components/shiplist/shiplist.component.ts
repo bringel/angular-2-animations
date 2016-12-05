@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Ship } from '../../model/ship.model';
 
 @Component({
   selector: 'br-shiplist',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shiplist.component.scss']
 })
 export class ShiplistComponent implements OnInit {
+
+  @Input() ships: Ship[];
 
   constructor() { }
 
