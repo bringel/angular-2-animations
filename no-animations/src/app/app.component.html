@@ -6,7 +6,7 @@
 
   <div class="content">
     <div class="list-content">
-      <br-shiplist [ships]="ships"></br-shiplist>
+      <br-shiplist [ships]="ships" (shipSelected)="shipSelected($event)"></br-shiplist>
     </div>
     <div class="detail-content">
       <br-ship-detail [detailText]="selectedShip?.description"></br-ship-detail>

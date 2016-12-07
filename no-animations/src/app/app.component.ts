@@ -15,4 +15,8 @@ export class AppComponent {
   constructor() {
     this.ships = ships;
   }
+
+  shipSelected(index: number) {
+    this.selectedShip = this.ships[index];
+  }
 }
