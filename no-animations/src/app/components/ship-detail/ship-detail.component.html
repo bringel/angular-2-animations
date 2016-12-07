@@ -1,0 +1,12 @@
+<div class="details-content-wrapper">
+  <div class="details-text">
+    {{detailText}}
+  </div>
+  <div *ngIf="expanded" class="more-details-text">
+    {{moreDetailText}}
+  </div>
+  <div class="expand-toggle" [ngSwitch]="expanded">
+    <span *ngSwitchCase="false">Show more</span>
+    <span *ngSwitchCase="true">Show less</span>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { ships } from './data/spaceships';
 export class AppComponent {
 
   private ships: Ship[];
+  private selectedShip: Ship;
 
   constructor() {
     this.ships = ships;

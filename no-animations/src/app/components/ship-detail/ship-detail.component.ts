@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'br-ship-detail',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShipDetailComponent implements OnInit {
 
+  @Input() detailText: string;
+  @Input() moreDetailText: string;
+
+  private expanded: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.expanded = false;
   }
 
 }
