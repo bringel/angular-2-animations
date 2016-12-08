@@ -5,7 +5,7 @@
       {{line}}
     </div>
   </div>
-  <div class="more-details-text">
+  <div *ngIf="expanded" class="more-details-text">
     <div *ngFor="let line of moreDetailText">
       {{line}}
     </div>
