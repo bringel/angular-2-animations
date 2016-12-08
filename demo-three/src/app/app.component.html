@@ -1,8 +1,14 @@
 <div class="wrapper">
   <div class="header">
     <h1>Awesome Spaceships</h1>
-    <button class="btn btn-info btn-lg" (click)="onAddShipClicked()">Add ship</button>
-    <button class="btn btn-danger btn-lg" (click)="onRemoveShipClicked()">Remove ship</button>
+    <button class="btn btn-info btn-lg" (click)="onAddShipClicked()"
+                                        [@hoverTrigger]="addButtonHoverState"
+                                        (mouseover)="onAddButtonHover()"
+                                        (mouseout)="onAddButtonUnHovered()">Add ship</button>
+    <button class="btn btn-danger btn-lg" (click)="onRemoveShipClicked()"
+                                          [@hoverTrigger]="removeButtonHoverState"
+                                          (mouseover)="onRemoveButtonHover()"
+                                          (mouseout)="onRemoveButtonUnHovered()">Remove ship</button>
   </div>
 
   <div class="content">
