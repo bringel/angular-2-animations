@@ -16,7 +16,12 @@ export const ships = [
   },
   {
     name: 'Battlestar Galactica',
-    description: [''],
-    moreInfo: ['']
+    description: ['One of the first 12 Battlestars constructed by the Twelve Colonies', 'representing the planet Caprica. '],
+    moreInfo: ['Franchise: Battlestar Galactica', 'Captain: William Adama']
+  },
+  {
+    name: 'T.A.R.D.I.S',
+    description: ['Time And Relative Dimension In Space. Capable of travelling through time', 'typically reconfigures the rooms inside on a whim. Also flies through space sometimes'],
+    moreInfo: ['Franchise: Doctor Who', 'Pilots: The Doctor, River Song']
   }
 ];
