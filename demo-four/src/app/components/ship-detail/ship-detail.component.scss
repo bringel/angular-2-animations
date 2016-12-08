@@ -1,0 +1,36 @@
+:host{
+  .details-content-wrapper{
+    border: 1px solid black;
+
+    .details-text {
+      height: 125px;
+      padding: 20px;
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    .more-details-text {
+      height: 50px;
+
+      padding: 0 10px;
+      border-top: 1px solid #c9c9c9;
+    }
+  }
+
+  .details-content{
+    overflow: hidden;
+  }
+
+  .expand-toggle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    border-top: 1px solid #c9c9c9;
+
+    cursor: pointer;
+  }
+}
