@@ -1,9 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
   selector: 'br-ship-detail',
   templateUrl: './ship-detail.component.html',
-  styleUrls: ['./ship-detail.component.scss']
+  styleUrls: ['./ship-detail.component.scss'],
+  animations: [
+    trigger('expandToggle', [
+      state('collapsed', style({height: '125px'})),
+      state('expanded', style({height: '175px'})),
+      transition('collapsed <=> expanded', animate('250ms'))
+    ])
+  ]
 })
 export class ShipDetailComponent implements OnInit {
 
@@ -13,6 +20,10 @@ export class ShipDetailComponent implements OnInit {
   private expanded: boolean;
 
   constructor() { }
+
+  private get expandedState(): string {
+    return this.expanded? 'expanded' : 'collapsed';
+  }
 
   ngOnInit() {
     this.expanded = false;

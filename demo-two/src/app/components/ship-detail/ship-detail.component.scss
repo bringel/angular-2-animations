@@ -1,6 +1,5 @@
 :host{
   .details-content-wrapper{
-    min-height: 150px;
     border: 1px solid black;
 
     .details-text {
@@ -18,6 +17,10 @@
       padding: 0 10px;
       border-top: 1px solid #c9c9c9;
     }
+  }
+
+  .details-content{
+    overflow: hidden;
   }
 
   .expand-toggle{

@@ -1,14 +1,16 @@
 <div class="details-content-wrapper">
+  <div class="details-content" [@expandToggle]="expandedState">
   <div class="details-text">
     <div *ngFor="let line of detailText">
       {{line}}
     </div>
   </div>
-  <div *ngIf="expanded" class="more-details-text">
+  <div class="more-details-text">
     <div *ngFor="let line of moreDetailText">
       {{line}}
     </div>
   </div>
+</div>
   <div class="expand-toggle" [ngSwitch]="expanded" (click)="onExpandedClicked()">
     <span *ngSwitchCase="false">Show more</span>
     <span *ngSwitchCase="true">Show less</span>
