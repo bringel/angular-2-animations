@@ -1,4 +1,25 @@
 :host{
+  .details-content-wrapper{
+    min-height: 150px;
+    border: 1px solid black;
+
+    .details-text {
+      height: 125px;
+      padding: 20px;
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    .more-details-text {
+      height: 50px;
+
+      padding: 0 10px;
+      border-top: 1px solid #c9c9c9;
+    }
+  }
+
   .expand-toggle{
     display: flex;
     flex-direction: row;
@@ -7,6 +28,6 @@
 
     border-top: 1px solid #c9c9c9;
 
-
+    cursor: pointer;
   }
 }

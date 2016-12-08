@@ -1,5 +1,6 @@
 
 export interface Ship {
   name: string;
-  description: string;
+  description: string[];
+  moreInfo: string[];
 }

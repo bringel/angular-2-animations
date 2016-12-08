@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Ship } from './model/ship.model';
-import { ships } from './data/spaceships';
+import { ships as shipData} from './data/spaceships';
 
 @Component({
   selector: 'br-root',
@@ -13,7 +13,17 @@ export class AppComponent {
   private selectedShip: Ship;
 
   constructor() {
-    this.ships = ships;
+    this.ships = [];
+  }
+
+  onAddShipClicked() {
+    if(this.ships.length < shipData.length){
+      this.ships.push(shipData[this.ships.length]);
+    }
+  }
+
+  onRemoveShipClicked() {
+    this.ships.pop();
   }
 
   shipSelected(index: number) {

@@ -18,4 +18,7 @@ export class ShipDetailComponent implements OnInit {
     this.expanded = false;
   }
 
+  onExpandedClicked() {
+    this.expanded = !this.expanded;
+  }
 }
