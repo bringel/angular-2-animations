@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, trigger, state, style, transition, animate, group } from '@angular/core';
 import { Ship } from '../../model/ship.model';
 
 @Component({
@@ -8,8 +8,11 @@ import { Ship } from '../../model/ship.model';
   animations: [
       trigger('flyIn', [
         transition('void => *', [
-          style({transform: 'translateX(-100%)'}),
-          animate('500ms')
+          style({transform: 'translateX(-100%)', opacity: 0}),
+          group([
+            animate('500ms', style({transform: 'translateX(0)'})),
+            animate('250ms 250ms', style({opacity: 1}))
+          ])
         ]),
         transition('* => void', animate('500ms', style({transform: 'translateX(-100%)'})))
       ])
