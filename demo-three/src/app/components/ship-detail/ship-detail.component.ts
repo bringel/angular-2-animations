@@ -6,8 +6,8 @@ import { Component, OnInit, Input, trigger, state, style, transition, animate } 
   styleUrls: ['./ship-detail.component.scss'],
   animations: [
     trigger('expandToggle', [
-      state('collapsed', style({height: '125px'})),
-      state('expanded', style({height: '175px'})),
+      state('collapsed', style({height: '*'})),
+      state('expanded', style({height: '200px'})),
       transition('collapsed <=> expanded', animate('250ms'))
     ])
   ]
