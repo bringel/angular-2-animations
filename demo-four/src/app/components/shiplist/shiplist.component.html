@@ -1,3 +1,0 @@
-<div class="list-wrapper">
-  <div class="list-item" *ngFor="let ship of ships;let i = index" (click)="onShipClicked(i)" [class.selected]="i === selected" [@flyIn]>{{ship.name}}</div>
-</div>
