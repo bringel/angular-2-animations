@@ -1,0 +1,25 @@
+:host{
+  .list-wrapper{
+    padding: 10px;
+
+    border-radius: 4px;
+
+    // background-color: #c9c9c9
+    border: 1px solid black;
+  }
+  .list-item{
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    &:hover{
+      // background-color: #ffffff;
+    }
+  }
+
+  .selected{
+    // background-color: #ffffff;
+  }
+
+}

@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="header">
+    <h1>Awesome Spaceships</h1>
+    <button class="btn btn-info btn-lg" (click)="onAddShipClicked()">Add ship</button>
+    <button class="btn btn-danger btn-lg" (click)="onRemoveShipClicked()">Remove ship</button>
+  </div>
+
+  <div class="content">
+    <div class="list-content">
+      <br-shiplist [ships]="ships" (shipSelected)="shipSelected($event)"></br-shiplist>
+    </div>
+    <div class="detail-content">
+      <br-ship-detail [detailText]="selectedShip?.description" [moreDetailText]="selectedShip?.moreInfo"></br-ship-detail>
+    </div>
+  </div>
+</div>
